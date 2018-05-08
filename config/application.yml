@@ -1,0 +1,12 @@
+development:
+  secret_key_base: 889f46bd0ab6675adf909608d9ee254ab1c1972ce575c04cb8127284ad2cac66887643d966409200ae18fb928d888e9d914402a28d9cd41104bb6b00ea4c0672
+  codewars_api_key: H8SByxoz5kPTQ48jT7vw
+
+test:
+  secret_key_base: 889f46bd0ab6675adf909608d9ee254ab1c1972ce575c04cb8127284ad2cac66887643d966409200ae18fb928d888e9d914402a28d9cd41104bb6b00ea4c0672
+  codewars_api_key: H8SByxoz5kPTQ48jT7vw
+
+production:
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+  codewars_api_key: <%= ENV["CODEWARS_API_KEY"] %>
+ 

@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   resources :exercises, only: [:index]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  # get '/', to: 'exercises#index'
+
   root :to => 'exercises#index'
+  post '/user_exercises', to: 'exercises#show'
+
+  post '/auth', to: 'auth#create'
+  get '/current_user', to: 'auth#show'
+
+  post '/current_session', to: 'editor_sessions#lookup'
+  patch '/current_session', to: 'editor_sessions#update'
+  patch 'remove_session', to: 'editor_sessions#delete'
+
 end 

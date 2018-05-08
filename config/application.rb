@@ -42,3 +42,4 @@ config_files.each do |file_name|
     ENV[k.upcase] ||= v
   end
 end
+ 
