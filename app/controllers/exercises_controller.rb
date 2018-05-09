@@ -10,7 +10,6 @@ class ExercisesController < ApplicationController
     puts 'userId:'
     puts params['userId']
     puts '@@@@@exercises#show@@@@@@'
-    # you need a name and a slug
     user = User.find_by(id: params[:userId])
     exercises = user.exercises
     if exercises
