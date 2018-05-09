@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   resources :exercises, only: [:index]
 
   root :to => 'exercises#index'
@@ -10,5 +11,8 @@ Rails.application.routes.draw do
   post '/current_session', to: 'editor_sessions#lookup'
   patch '/current_session', to: 'editor_sessions#update'
   patch 'remove_session', to: 'editor_sessions#delete'
+
+  mount ActionCable.server => '/cable'
+  post '/edits', to: 'edits#create'
 
 end 
