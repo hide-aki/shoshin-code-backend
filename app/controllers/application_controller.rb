@@ -12,19 +12,14 @@ class ApplicationController < ActionController::API
     current_user.id
   end
 
-  # in rails console, ENV['secret_key_base'] returns nil. Using plaintext 'secret' for now.
-  # at bottom of config/application.rb, I added code from a blog to hash entries in secrets.yml
-  # (ENV k,v not getting set. why?)
   # (return encoded token using user id as payload, SHA-256 algorithm)
   def issue_token(payload)
-    JWT.encode(payload, 'secret', 'HS256') 
+    JWT.encode(payload, ENV['codewars_api_key'], 'HS256') 
   end
 
-  # in rails console, ENV['secret_key_base'] returns nil.
-  # see bottom of config/application.rb (ENV k,v not getting set. why?)
   def decoded_token
     begin
-      JWT.decode( token, 'secret', true, { algorithm: 'HS256' } )
+      JWT.decode( token, ENV['codewars_api_key'], true, { algorithm: 'HS256' } )
     rescue JWT::DecodeError  # rescue if decode blows up, return something with correct shape, so user_id will be nil
       [{}]
     end
