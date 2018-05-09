@@ -18,9 +18,9 @@ class AuthController < ApplicationController
     token = request.headers['Authorization']
     user = User.find_by(id: user_id)
     if user
-      render json: {username: user.username, id: user.id} # pass back session collection also? user.sessions will look like ??
+      render json: {username: user.username, id: user.id}
     else
-      render json: {error: 'Invalid user token :('}, status: 401 # user_id is nil in application_controller
+      render json: {error: 'Invalid user token :('}, status: 401
     end
   end
 

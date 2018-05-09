@@ -6,7 +6,6 @@ class ExercisesController < ApplicationController
   end
 
   def show
-
     puts '@@@@@exercises#show@@@@@@'
     puts 'userId:'
     puts params['userId']
@@ -20,21 +19,6 @@ class ExercisesController < ApplicationController
       exercises = [ {name: 'No Saved Sessions ...', slug: ''} ]
       render json: { userExercises: exercises }
     end
-
-    # get user sessions
-    # sessions = user.editor_sessions
-    # get user exercises
-    # exercises = sessions.map {|s| Exercise.find_by(id: s.exercise_id)}
-    # 
-    # exercises.map {|e| e.name}
-    # => ["flatten()"]
-
-    # sessions.map { |s|
-    #   exercises.map { |e|
-
-    #   }
-    # }
-
   end
 
 end
