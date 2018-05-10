@@ -74,7 +74,7 @@ Rails.application.configure do
   config.web_socket_server_url = "wss://shoshin-code-backend.herokuapp.com/cable"
   # Action Cable can only accept WebSocket requests from specified origins. 
   # Pass those origins to the Action Cable server's configuration as an array
-  config.action_cable.allowed_request_origins = ['https://shoshin-code-backend.herokuapp.com', 'http://shoshin-code-backend.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://shoshin-code-frontend.herokuapp.com', 'http://shoshin-code-frontend.herokuapp.com']
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
