@@ -2,7 +2,7 @@ class ExercisesController < ApplicationController
 
   def index
     exercises = Exercise.all
-    render json: exercises.sort_by { |e| e.voteScore }
+    render json: exercises.sort_by { |e| e.voteScore } 
   end
 
   def show
