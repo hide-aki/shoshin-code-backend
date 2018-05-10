@@ -37,7 +37,7 @@ Rails.application.configure do
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
   # config.action_cable.allowed_request_origins = [ 'https://shoshin-code-frontend.herokuapp.com', /https:\/\/shoshin-code-frontend.*/ ]
-  config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/, /ws:\/\/*/, /wss:\/\/*/]
+  # config.action_cable.allowed_request_origins = [/http:\/\/*/, /https:\/\/*/, /ws:\/\/*/, /wss:\/\/*/]
 
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
@@ -69,6 +69,12 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
+
+  # set the cable server's URI for production
+  config.web_socket_server_url = "wss://shoshin-code-backend.herokuapp.com/cable"
+  # Action Cable can only accept WebSocket requests from specified origins. 
+  # Pass those origins to the Action Cable server's configuration as an array
+  config.action_cable.allowed_request_origins = ['https://shoshin-code-backend.herokuapp.com', 'http://shoshin-code-backend.herokuapp.com']
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new

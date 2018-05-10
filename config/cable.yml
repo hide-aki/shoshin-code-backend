@@ -7,5 +7,5 @@ test:
 production:
   adapter: redis
   # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  url: <%= ENV['REDIS_URL'] %>
+  url: redis://redistogo:97b63b7654491b768237eabb1d0b9dee@soldierfish.redistogo.com:10233/
   channel_prefix: codewars_api_three_production
