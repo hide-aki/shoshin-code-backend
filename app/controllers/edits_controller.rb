@@ -6,7 +6,7 @@ class EditsController < ApplicationController
       serialized_data = ActiveModelSerializers::Adapter::Json.new(EditSerializer.new(edit)).serializable_hash
 
       ActionCable.server.broadcast 'edits_channel', serialized_data
-      # head :ok
+      head :ok
 
       render json: edit
 
