@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
 
   def token
-    request.headers['Authorization']
+    request.headers['Authorization'] 
   end
 
   def current_user
@@ -14,12 +14,12 @@ class ApplicationController < ActionController::API
 
   # (return encoded token using user id as payload, SHA-256 algorithm)
   def issue_token(payload)
-    JWT.encode(payload, ENV['codewars_api_key'], 'HS256') 
+    JWT.encode(payload, ENV['secret_key_base'], 'HS256') 
   end
 
   def decoded_token
     begin
-      JWT.decode( token, ENV['codewars_api_key'], true, { algorithm: 'HS256' } )
+      JWT.decode( token, ENV['secret_key_base'], true, { algorithm: 'HS256' } )
     rescue JWT::DecodeError  # rescue if decode blows up, return something with correct shape, so user_id will be nil
       [{}]
     end
