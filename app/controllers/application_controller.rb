@@ -14,7 +14,7 @@ class ApplicationController < ActionController::API
 
   # (return encoded token using user id as payload, SHA-256 algorithm)
   def issue_token(payload)
-    JWT.encode(payload, ENV['secret_key_base'], 'HS256') 
+    JWT.encode(payload, ENV['secret_key_base'], 'HS256')
   end
 
   def decoded_token
