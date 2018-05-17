@@ -6,13 +6,18 @@ class ExercisesController < ApplicationController
   end
 
   def show
-    user = User.find_by(id: params[:userId]) 
-    exercises = user.exercises
-    if exercises
-      exercises = exercises.sort { |a,b| a.name.downcase <=> b.name.downcase }
-      render json: { userExercises: exercises }
+    user = User.find_by(id: params[:userId])
+    if user
+      exercises = user.exercises
+      if exercises
+        exercises = exercises.sort { |a,b| a.name.downcase <=> b.name.downcase }
+        render json: { userExercises: exercises }
+      else
+        exercises = [ {name: 'No Saved Sessions ...', slug: ''} ]
+        render json: { userExercises: exercises }
+      end
     else
-      exercises = [ {name: 'No Saved Sessions ...', slug: ''} ]
+      exercises = [ {name: 'Not Logged In ...', slug: ''} ]
       render json: { userExercises: exercises }
     end
   end
