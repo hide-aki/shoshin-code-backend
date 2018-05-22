@@ -26,6 +26,10 @@ gem 'rest-client'
 gem 'active_model_serializers', '~> 0.10.0'
 
 gem 'figaro'
+
+# Write & deploy cron jobs: https://github.com/javan/whenever
+# (not Heroku friendly, use Scheduler )
+# gem 'whenever'
  
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

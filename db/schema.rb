@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2018_05_09_013319) do
 
-  # These are extensions that must be enabled in order to support this database
+  # These are extensions that must be enabled in order to support this database 
   enable_extension "plpgsql"
 
   create_table "editor_sessions", force: :cascade do |t|
