@@ -7,7 +7,7 @@ class Exercise < ApplicationRecord
   serialize :tags, Array
 
   # setup / update exercise table
-  def get_exercises_once_daily
+  def get_exercises
     codewars_api_root = "https://www.codewars.com/api/v1/code-challenges"
     slugs = ["binary-tree-compare", "binary-tree-traversal", "the-supermarket-queue", "all-unique", "flatten", "remove-duplicates", "valid-parentheses", "multi-level-sorting", "simple-fun-number-116-prime-string", "longest-palindrome", "binary-search-tree-using-arrays", "convert-string-to-camel-case", "where-my-anagrams-at", "simple-fun-number-1-seats-in-theater", "who-is-going-to-pay-for-the-wall", "noobcode-01-supersize-me-dot-dot-dot-or-rather-this-integer", "count-odd-numbers-below-n", "area-of-a-square", "get-nth-even-number", "word-count", "character-frequency-2", "welcome-to-the-city", "stringy-strings", "remove-first-and-last-character", "potenciation", "subtract-the-sum", "chuck-norris-vi-shopping-with-chuck", "check-rna-nucleotides"]
 
