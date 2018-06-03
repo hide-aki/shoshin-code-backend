@@ -1,12 +1,12 @@
 class EditsController < ApplicationController
 
   def create
-    edit = Edit.new( text: params[:newValue], sender_id: params[:editorId] )
+    edit = Edit.new( text: params[:newValue], sender_id: params[:editorId], session: params[:sessionId] )
     if edit.save
-      serialized_data = ActiveModelSerializers::Adapter::Json.new(EditSerializer.new(edit)).serializable_hash
-
-      ActionCable.server.broadcast 'edits_channel', serialized_data
-      head :ok
+      # serialized_data = ActiveModelSerializers::Adapter::Json.new(EditSerializer.new(edit)).serializable_hash
+      # ActionCable.server.broadcast 'edits_channel', serialized_data
+      # ActionCable.server.broadcast "edits_#{params[:sessionId]}", serialized_data
+      # head :ok
 
       render json: edit
 

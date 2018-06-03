@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   patch 'remove_session', to: 'editor_sessions#delete'
 
   mount ActionCable.server => '/cable'
-  post '/edits', to: 'edits#create'
+  post '/edits', to: 'edits#create' 
 
 end 
  

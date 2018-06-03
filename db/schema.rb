@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_09_013319) do
+ActiveRecord::Schema.define(version: 2018_05_28_220718) do
 
-  # These are extensions that must be enabled in order to support this database 
+  # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "editor_sessions", force: :cascade do |t|
@@ -23,11 +23,12 @@ ActiveRecord::Schema.define(version: 2018_05_09_013319) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "edits", force: :cascade do |t| 
+  create_table "edits", force: :cascade do |t|
     t.string "text"
     t.string "sender_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "session"
   end
 
   create_table "exercises", force: :cascade do |t|
