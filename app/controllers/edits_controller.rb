@@ -7,9 +7,7 @@ class EditsController < ApplicationController
       # ActionCable.server.broadcast 'edits_channel', serialized_data
       # ActionCable.server.broadcast "edits_#{params[:sessionId]}", serialized_data
       # head :ok
-
       render json: edit
-
     else
       render json: {error: 'Could not create that edit'}, status: 422
     end
