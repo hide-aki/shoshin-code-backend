@@ -7,6 +7,9 @@ class ExercisesController < ApplicationController
 
   def show
     user = User.find_by(id: params[:userId])
+    puts '########## exercises#show ##########'
+    puts "userId: #{params[:userId]}"
+    puts '########## exercises#show ##########'
     if user
       exercises = user.exercises
       if exercises

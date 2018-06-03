@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :exercises, only: [:index]
 
   root :to => 'exercises#index'
-  post '/user_exercises', to: 'exercises#show'
+  # post '/user_exercises', to: 'exercises#show'
+  get '/user_exercises', to: 'exercises#show'
 
   post '/auth', to: 'auth#create'
   get '/current_user', to: 'auth#show'
