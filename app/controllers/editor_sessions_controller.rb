@@ -11,7 +11,7 @@ class EditorSessionsController < ApplicationController
       content = session.editor_content
       render json: { editorContent: content }
     else
-      render json: { editorContent: "\/\/ Welcome. If you\'re using Shoshin to practice,\r\n\/\/ you probably realize that writing code is an iterative process. In that spirit,\r\n\/\/ this editor/interpreter is Alpha, and is ES5 only. This means you won\'t\r\n\/\/ be able to use [const] or [let], only [var]. Interpreting ES6 will be the next step for Shoshin.\r\n\r\n\/\/ CMD-ENTER TO EVALUATE YOUR CODE\r\n\/\/ console logging expressions or primitives other than strings is not yet\r\n\/\/ implemented. Thank you for trying Shoshin!\r\n\r\nconsole.log(\'Hello World!\')\r\n\/\/ type CMD-ENTER"}
+      render json: { editorContent: "\/\/ Welcome. The Shoshin Repl currently implements a complete ECMAScript 3 environment and a partial ECMAScript 6 environment using vm.js, a JS bytecode compiler. Most patterns you would use to solve problems here are supported (including object destructuring and generators!) The next version (in development) will implement a Node.js API instance bootstrapped in the browser. Thank you for using Shoshin!\r\n\/\/ (Remember you can share a live view of your session using the left menu)\r\n\r\n\/\/ type CMD-ENTER TO EVALUATE YOUR CODE :)\r\nconsole.log(\'Hello World!\')"}
     end
   end
 
