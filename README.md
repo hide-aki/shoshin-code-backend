@@ -1,7 +1,6 @@
 # Shoshin Code (Rails API Backend)
 ([Frontend Repo](https://github.com/jaf7/shoshin-code-frontend))
 
-# Shoshin Code
 A coding practice and mentorship application that integrates coding exercises with an editor and repl, offers real-time session sharing across a network and session saving for any editor/exercise combination. Features ES6 evaluation & error handling, code highlighting, secure user authentication, WebSocket session streaming and exercises from the CodeWars API.
 
 ## Motivation
