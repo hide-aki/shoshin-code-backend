@@ -1,19 +1,24 @@
 # Shoshin Code (Rails API Backend)
 ([Frontend Repo](https://github.com/jaf7/shoshin-code-frontend))
 
-A coding practice and mentorship platform that integrates coding exercises with an editor and repl, offers real-time session sharing across a network and session saving for any editor/exercise combination. A SPA that features ES6 evaluation, code highlighting, secure user authentication, WebSocket session streaming and exercises from the CodeWars API.
+# Shoshin Code
+A coding practice and mentorship application that integrates coding exercises with an editor and repl, offers real-time session sharing across a network and session saving for any editor/exercise combination. Features ES6 evaluation & error handling, code highlighting, secure user authentication, WebSocket session streaming and exercises from the CodeWars API.
 
 ## Motivation
-This app is born from a deep appreciation of online coding environments like [Repl.it](https://repl.it). A way of thinking, creating and building that started with the Unix time sharing systems of old is coming into its own in an incredible way: collaborative work across the network is how we're building the future. I find this way of building fascinating and want to understand it better. This is the first iteration of my effort in this regard. It's intended to be a learning experience not only in its building but in its use.
+This app is born from a deep appreciation of online coding environments like [Repl.it](https://repl.it). I wanted to use and offer to others a tool that combines the salient features of such environments with real-time session sharing to support mentorship and exercises in the spirit of code Katas. I wanted a clean, elegant experience with crisp interatctions that doesn't get in the way and lets the user focus on learning. 
 
-# Demo
-➡️  &nbsp; Use it [here](https://shoshin-code-frontend.herokuapp.com/)
+## Demo
+➡️  &nbsp; Use it [here](https://shoshin-code-frontend.herokuapp.com/)! (Feedback welcome! @janthonyfields)
 
-➡️  &nbsp; Watch it [here](#)
+➡️  &nbsp; Watch a 2 minute demo [here](https://youtu.be/ZMLLfiwjtxo)
 
-[![Watch demo](https://i.imgur.com/UrAkFo9.png)](#)
+[![Watch demo](https://i.imgur.com/UrAkFo9.png)](https://youtu.be/ZMLLfiwjtxo)
+<br></br>
 <img src="https://i.imgur.com/0lC6aM3.png">
+<br></br>
 <img src="https://i.imgur.com/z3TFN0B.png">
+<br></br>
+<img src="https://i.imgur.com/mOIRbKO.png">
 
 ## Installation
 Nothing to install. Shoshin runs in your browser, including the sandboxed JavaScript interpreter.
@@ -22,7 +27,7 @@ Nothing to install. Shoshin runs in your browser, including the sandboxed JavaSc
 * [React](https://reactjs.org/)
 * [Redux](https://github.com/reduxjs/redux/blob/master/README.md)
 * [React Router](https://reacttraining.com/react-router/)
-* [Rails](https://rubyonrails.org/) RESTful API with [PostgreSQL](https://www.postgresql.org/) ([Rails Backend Repo](https://github.com/jaf7/shoshin-code-backend))
+* [Rails](https://rubyonrails.org/) RESTful API with [PostgreSQL](https://www.postgresql.org/) (Rails backend repo [here](https://github.com/jaf7/shoshin-code-backend))
 * [ActionCable](http://guides.rubyonrails.org/action_cable_overview.html) WebSockets with [Redis Pub/Sub](https://redis.io/topics/pubsub)
 * [JWT](https://jwt.io/) / [ruby-jwt](https://github.com/jwt/ruby-jwt/blob/master/README.md) / [Bcrypt](https://github.com/codahale/bcrypt-ruby/blob/master/README.md) hashing
 * [Ace Editor](https://github.com/ajaxorg/ace/blob/master/Readme.md)
@@ -35,7 +40,11 @@ Nothing to install. Shoshin runs in your browser, including the sandboxed JavaSc
  - [ ] Implement chat using Pusher Chatkit with WebSockets
  - [ ] Add read/write access toggling for 2nd party
  - [ ] Protect infinite loops
+ - [ ] Experiment with replacing VM.js interpreter with Node.js, inspired by [olydis](https://github.com/olydis/node-in-browser/blob/master/README.md)
 
+ ### Backend
+ The Rails backend repo is [here](https://github.com/jaf7/shoshin-code-backend)
+<br></br>
 ## License
 
 The MIT License (MIT)
