@@ -31,7 +31,7 @@ Nothing to install. Shoshin runs in your browser, including the sandboxed JavaSc
 * [React Router](https://reacttraining.com/react-router/)
 * [Rails](https://rubyonrails.org/) RESTful API with [PostgreSQL](https://www.postgresql.org/) (Rails backend repo [here](https://github.com/jaf7/shoshin-code-backend))
 * [ActionCable](http://guides.rubyonrails.org/action_cable_overview.html) WebSockets with [Redis Pub/Sub](https://redis.io/topics/pubsub)
-* [JWT](https://jwt.io/) / [ruby-jwt](https://github.com/jwt/ruby-jwt/blob/master/README.md)
+* [JWT](https://jwt.io/) / [ruby-jwt](https://github.com/jwt/ruby-jwt/blob/master/README.md) for stateless user authentication/authorization
 * [Bcrypt](https://github.com/codahale/bcrypt-ruby/blob/master/README.md) for [has_secure_password](https://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html) validation & authentication
 * [Ace Editor](https://github.com/ajaxorg/ace/blob/master/Readme.md)
 * [React-Ace](https://github.com/securingsincity/react-ace)
