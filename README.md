@@ -3,8 +3,11 @@
 
 A coding practice and mentorship application that integrates coding exercises with an editor and repl, offers real-time session sharing across a network and session saving for any editor/exercise combination. Features ES6 evaluation & error handling, code highlighting, secure user authentication, WebSocket session streaming and exercises from the CodeWars API.
 
+# Shoshin Code
+A coding practice and mentorship application that integrates coding exercises with an editor and repl, offers real-time session sharing across a network and session saving for any editor state / exercise combination. Features ES6 sandboxed evaluation (no `eval`) & error handling, code highlighting, secure user authentication (JWT), WebSocket session streaming using unique URLs and exercises from the CodeWars API.
+
 ## Motivation
-This app is born from a deep appreciation of online coding environments like [Repl.it](https://repl.it). I wanted to use and offer to others a tool that combines the salient features of such environments with real-time session sharing to support mentorship and exercises in the spirit of code Katas. I wanted a clean, elegant experience with crisp interatctions that doesn't get in the way and lets the user focus on learning. 
+This app is born from a deep appreciation of online coding environments like [Repl.it](https://repl.it). I wanted to use and offer to others a tool that combines the salient features of such environments with real-time session sharing to support mentorship and exercises in the spirit of code Katas. I wanted a clean, elegant experience with crisp interactions that doesn't get in the way and lets the user focus on learning. 
 
 ## Demo
 ➡️  &nbsp; Use it [here](https://shoshin-code-frontend.herokuapp.com/)! (Feedback welcome! @janthonyfields)
@@ -28,7 +31,8 @@ Nothing to install. Shoshin runs in your browser, including the sandboxed JavaSc
 * [React Router](https://reacttraining.com/react-router/)
 * [Rails](https://rubyonrails.org/) RESTful API with [PostgreSQL](https://www.postgresql.org/) (Rails backend repo [here](https://github.com/jaf7/shoshin-code-backend))
 * [ActionCable](http://guides.rubyonrails.org/action_cable_overview.html) WebSockets with [Redis Pub/Sub](https://redis.io/topics/pubsub)
-* [JWT](https://jwt.io/) / [ruby-jwt](https://github.com/jwt/ruby-jwt/blob/master/README.md) / [Bcrypt](https://github.com/codahale/bcrypt-ruby/blob/master/README.md) hashing
+* [JWT](https://jwt.io/) / [ruby-jwt](https://github.com/jwt/ruby-jwt/blob/master/README.md)
+* [Bcrypt](https://github.com/codahale/bcrypt-ruby/blob/master/README.md) for [has_secure_password](https://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html) validation & authentication
 * [Ace Editor](https://github.com/ajaxorg/ace/blob/master/Readme.md)
 * [React-Ace](https://github.com/securingsincity/react-ace)
 * [VM.js](https://github.com/tarruda/vm.js/) ES6 bytecode compiler and VM
@@ -36,13 +40,18 @@ Nothing to install. Shoshin runs in your browser, including the sandboxed JavaSc
 * Custom SASS additions using [node-sass-chokidar](https://www.npmjs.com/package/node-sass-chokidar) preprocessor
 
 ## To-do
- - [ ] Implement chat using Pusher Chatkit with WebSockets
+ - [ ] Refactor custom styling to [SASS 7-1 pattern](https://gist.github.com/rveitch/84cea9650092119527bc) with [BEM](http://getbem.com/naming/) (Block__Element--Modifier)
+ - [ ] Add mediaquery breakpoint for tablet portrait mode
+ - [ ] Refactor NavigationTabs component to React-MD tabs pattern
+ - [ ] Feature: Naming & saving of free-form sessions
+ - [ ] Feature: Users can add their own exercises / katas (using a markdown editor component)
+ - [ ] Feature: Chat using Pusher Chatkit with WebSockets
  - [ ] Add read/write access toggling for 2nd party
- - [ ] Protect infinite loops
+ - [ ] Comprehensively protect against infinite loops
  - [ ] Experiment with replacing VM.js interpreter with Node.js, inspired by [olydis](https://github.com/olydis/node-in-browser/blob/master/README.md)
 
- ### Backend
- The Rails backend repo is [here](https://github.com/jaf7/shoshin-code-backend)
+ ### Frontend
+ The React/Redux frontend repo is [here](https://github.com/jaf7/shoshin-code-frontend)
 <br></br>
 ## License
 
