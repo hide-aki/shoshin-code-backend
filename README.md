@@ -40,6 +40,7 @@ Nothing to install. Shoshin runs in your browser, including the sandboxed JavaSc
 * Custom SASS additions using [node-sass-chokidar](https://www.npmjs.com/package/node-sass-chokidar) preprocessor
 
 ## To-do
+ - [ ] move `exercise#get_exercises` logic to a [scheduler](https://devcenter.heroku.com/articles/scheduler) job for requests to CodeWars API endpoint
  - [ ] Refactor custom styling to [SASS 7-1 pattern](https://gist.github.com/rveitch/84cea9650092119527bc) with [BEM](http://getbem.com/naming/) (Block__Element--Modifier)
  - [ ] Add mediaquery breakpoint for tablet portrait mode
  - [ ] Refactor NavigationTabs component to React-MD tabs pattern
