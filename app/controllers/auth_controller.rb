@@ -1,9 +1,10 @@
-class AuthController < ApplicationController
+class AuthController < ApplicationController 
 
   def create
     user = User.find_by(username: params[:username])
+
     if user
-      login_user(user)
+      login_user(user) # authenticate by application_controller#login_user
     else
       user = User.new(user_params)
       if user.save
@@ -15,9 +16,9 @@ class AuthController < ApplicationController
   end
 
   def show
-    token = request.headers['Authorization']
     user = User.find_by(id: user_id)
-    if user
+    # if user
+    if logged_in?
       render json: {username: user.username, id: user.id}
     else
       render json: {error: 'Invalid user token :('}, status: 401
@@ -26,7 +27,7 @@ class AuthController < ApplicationController
 
   private
   def user_params
-    params.permit(:username, :password)
+    params.permit(:username, :password, :auth)
   end
 
 end

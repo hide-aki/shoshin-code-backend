@@ -5,7 +5,7 @@ class ApplicationController < ActionController::API
   end
 
   def current_user
-    @current_user ||= User.find_by(id: user_id) #temp find by id directly
+    @current_user ||= User.find_by(id: user_id) # find by id directly for now
   end
 
   def user_id
@@ -26,6 +26,7 @@ class ApplicationController < ActionController::API
   end
 
   def user_id
+    puts "decoded token: #{decoded_token}"
     decoded_token.first['user_id']
   end
 
@@ -34,8 +35,12 @@ class ApplicationController < ActionController::API
       token = issue_token user_id: user.id, username: user.username # , jwt: token
       render json: {id: user.id, username: user.username, jwt: token}
     else
-      render json: {error: "Sorry, cannot find that user :("}, status: 401 # unauthorized
+      render json: {error: "Sorry, check your username and password :("}, status: 401 # unauthorized
     end
+  end
+
+  def logged_in?
+    !!current_user # cast this variable into boolean type
   end
 
 end

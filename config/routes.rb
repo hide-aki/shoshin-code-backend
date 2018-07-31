@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/user_exercises', to: 'exercises#show'
 
   post '/auth', to: 'auth#create'
-  get '/current_user', to: 'auth#show'
+  get '/current_user', to: 'auth#show' 
 
   # post '/current_session', to: 'editor_sessions#lookup'
   get '/current_session', to: 'editor_sessions#show'
