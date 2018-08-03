@@ -18,7 +18,9 @@ class EditorSessionsController < ApplicationController
       user.exercises << exercise
     end
     
-
+    session = user.editor_sessions.find_by(exercise_id: exercise['id'])
+    session.update(editor_content: params['sessionContent'])
+    content = session.editor_content
 
     puts "********** session.editor_content **********"
     puts content
