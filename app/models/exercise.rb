@@ -34,7 +34,7 @@ class Exercise < ApplicationRecord
           e.totalStars = data["totalStars"]
           e.voteScore = data["voteScore"]
           e.tags = data["tags"]
-        end
+        end 
         if exercise.save
           puts '### new exercise saved ###'
         else

@@ -1,10 +1,5 @@
 class EditorSessionsController < ApplicationController
-
-  # def lookup
   def show
-    puts '########## editor_sessions#show ##########'
-    puts "userId: #{params[:userId]}, exerciseId: #{params[:exerciseId]}"
-    puts '########## editor_sessions#show ##########'
     user = User.find_by(id: params[:userId])
     session = user.editor_sessions.find_by(exercise_id: params[:exerciseId])
     if session
@@ -17,16 +12,19 @@ class EditorSessionsController < ApplicationController
 
   def update
     user = User.find_by(id: params[:userId])
+
     exercise = Exercise.find_by(id: params[:exerciseId])
     if !user.exercises.include?(exercise)
       user.exercises << exercise
     end
-    session = user.editor_sessions.find_by(exercise_id: exercise['id'])
-    session.update(editor_content: params['sessionContent'])
-    content = session.editor_content
+    
+
+
+    puts "********** session.editor_content **********"
+    puts content
+    puts "********** session.editor_content **********"
 
     render json: { editorContent: content }
-
   end
 
   def delete
@@ -38,6 +36,4 @@ class EditorSessionsController < ApplicationController
     render json: user.editor_sessions
   end
 
-
 end
- 

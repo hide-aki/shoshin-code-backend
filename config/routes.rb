@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # post '/current_session', to: 'editor_sessions#lookup'
   get '/current_session', to: 'editor_sessions#show'
   patch '/current_session', to: 'editor_sessions#update'
-  patch 'remove_session', to: 'editor_sessions#delete'
+  patch '/remove_session', to: 'editor_sessions#delete'
 
   mount ActionCable.server => '/cable'
   # post '/edits', to: 'edits#create'
